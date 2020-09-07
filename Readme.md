@@ -1,7 +1,7 @@
 # Личный проект «Седона»
 
 * Студент: [German Makhianov](https://up.htmlacademy.ru/htmlcss/29/user/1431233).
-* Наставник: `Неизвестно`.
+* Наставник: [Марианна Эльдарова](https://htmlacademy.ru/profile/id82294).
 
 ---
 
