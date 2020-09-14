@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <title>Отели</title>
+</head>
+
+<body>
+    <header>
+        <nav>
+          <a href="#">
+            <img class="logo" src="img/logo.png">
+          </a>
+          <ul>
+            <li><a  href="#">Информация</a></li>
+            <li><a  href="#">Фото и видео</a></li>          
+            <li><a  href="#">Карта штата</a></li>
+            <li><a  href="#" class="activ">Гостиницы</a></li>
+          </ul>
+        </nav>
+      </header>
+    <main>
+        <section class="filtr">
+            <form id="filters-form" role="form">
+                
+                <div>
+                    <h1>Инфраструктура:</h1>
+                    <div id="infro">
+                        <div class="checkbox"><label><input type="checkbox" name="infro[]" value="1"> Бассейн</label></div>
+                        <div class="checkbox"><label><input type="checkbox" name="infro[]" value="2"> Парковка</label></div>
+                        <div class="checkbox"><label><input type="checkbox" name="infro[]" value="3"> WI - FI</label></div>
+                    </div>
+                </div>
+
+                <div>
+                    <h1>Тип жилья:</h1>
+                    <div id="type">
+                        <div class="checkbox"><label><input type="checkbox" name="type[]" value="1"> Гостиница</label></div>
+                        <div class="checkbox"><label><input type="checkbox" name="type[]" value="2"> Мотель</label></div>
+                        <div class="checkbox"><label><input type="checkbox" name="type[]" value="3"> Апартаменты</label></div>
+                    </div>
+                </div>
+
+                <div>
+                    <h1>Стоимость в сутки (Р):</h1>
+                    <div id="prise">
+                        <p>от 0 |  до 3000</p>
+                        
+                        <input type="hidden" id="min-price" name="min_price" value="0">
+                        <input type="hidden" id="max-price" name="max_price" value="3000">
+                    </div>
+                    <button><p>Показать</p></button>
+                </div>
+            </form>
+        </section>
+        <section>
+            <ul>
+                <li><h2>НАЙДЕНО: 3</h2></li>
+                <li><p>Сортировка:</p></li>
+                <li><a><p>По цене</p></a></li>
+                <li><a><p>По типу</p></a></li>
+                <li><a><p>По рейтингу</p></a></li>
+            </ul>
+            <div><a><img></a><a><img></a></div>
+        </section>
+        <section class="list">
+            <div class="list-block">
+                <ul>
+                    <li>
+                        <a href="product.html">                    
+                            <img src="img/product-1.jpg" width="220" height="165" alt="Набор для путешествий «Baxter of California»">                                   
+                        </a>
+                    </li>
+                    <li><h3>Amara Resort & Spa</h3>
+                        <p>От 4000 Р.</p>
+                        <button type="button">Подробнее</button>
+                        <button type="button">забронировать</button>
+                    </li>
+                    <li>
+                        <img class="stars">
+                        <p>Рейтинг: 8,5</p>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="list-block">
+                <ul>
+                    <li>
+                        <a href="product.html">                    
+                            <img src="img/product-1.jpg" width="220" height="165" alt="Набор для путешествий «Baxter of California»">                                   
+                        </a>
+                    </li>
+                    <li><h3>Desert Quail Inn</h3>
+                        <p>От 3000 Р.</p>
+                        <button type="button">Подробнее</button>
+                        <button type="button">забронировать</button>
+                    </li>
+                    <li>
+                        <img class="stars">
+                        <p>Рейтинг: 8,9</p>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="list-block">
+                <ul>
+                    <li>
+                        <a href="product.html">                    
+                            <img src="img/product-1.jpg" width="220" height="165" alt="Набор для путешествий «Baxter of California»">                                   
+                        </a>
+                    </li>
+                    <li><h3>Villas at Poco Diablo</h3>
+                        <p>От 2000 Р.</p>
+                        <button type="button">Подробнее</button>
+                        <button type="button">забронировать</button>
+                    </li>
+                    <li>
+                        <img class="stars">
+                        <p>Рейтинг: 9,2</p>
+                    </li>
+                </ul>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <div class="contact">
+          <p>#visitSEDONA<br>ТЕЛ: +7(495) 666-01-66</p>
+        </div>
+        <ul>
+          <li>
+            <a href="#">
+              <img src="social">
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <img src="social">
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <img src="social">
+            </a>
+          </li>
+        </ul>
+        <div class="htmlacademy">
+          <a>
+            <img class="htmlacademylogo">
+          </a>
+        </div>
+      </footer> 
+</body>
+</html>
