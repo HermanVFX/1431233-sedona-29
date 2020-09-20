@@ -37,6 +37,7 @@ body {
 
 a {
   text-decoration: none;
+  color: var(--black);
 }
 
 img {
@@ -226,4 +227,152 @@ button {
 
 .footer-logo-svg path:hover {
   fill: var(--blue);
+}
+
+/*-----------------------*/
+/*-------HotelPage-------*/
+/*-----------------------*/
+
+.hotel-hidden{
+  visibility: hidden;
+}
+
+.filtr {
+  color: var(--white);
+  background-color: var(--blue);
+  background-image: url("../img/BG-hotelspage.png");
+  background-position: 0 0;
+  background-repeat: no-repeat;
+  background-size: 100%;
+}
+
+.filtr-list-hidden {
+  font-weight: bold;
+  font-size: 16px;
+}
+
+.price {
+  border: 2px solid var(--white);
+  box-sizing: border-box;
+  border-radius: 2px;
+}
+
+.show {
+  font-weight: normal;
+  color: var(--white);
+  background: transparent;
+  border: 2px solid var(--white);
+  box-sizing: border-box;
+  border-radius: 2px;
+}
+
+.show:hover {
+  color: var(--black);
+  background: var(--white);
+}
+
+.sorting {
+  font-size: 12px;
+  line-height: 18px;
+}
+
+.sorting-list {
+  list-style: none;
+}
+
+.found {
+  font-weight: bold;
+  font-size: 21px;
+  line-height: 26px;
+}
+
+/*-----------------------------------------*/
+
+.sorting {
+  border-bottom: 1px solid var(--gray);
+}
+
+.sorting-button {
+  border-bottom: 1px dashed var(--esey-blue);
+  color: var(--esey-brown);
+}
+
+.sorting-button:hover {
+  color: var(--esey-blue);
+}
+
+.sorting-button:focus {
+  color: var(--black);
+}
+
+.active {
+  pointer-events: none;
+  cursor: default;
+  color: var(--esey-blue);
+  border-bottom: none;
+}
+
+.arrow path:hover {
+  fill: var(--black);
+}
+
+.arrow path:focus {
+  fill: var(--esey-blue);
+}
+
+.active-arrow path{
+  fill: var(--esey-blue);
+}
+
+/*-----------------------------------------*/
+
+.list-block {
+  border-bottom: 1px solid var(--gray); 
+}
+
+.block-hotel {
+  list-style: none;
+}
+
+.button-about
+.button-checked {
+  vertical-align: middle;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 21px;
+}
+
+.button-about {
+  background: var(--esey-blue);
+  color: var(--white);
+  border: none;
+}
+
+.button-checked {
+  background: var(--esey-brown);
+  color: var(--white);
+  border: none;
+}
+
+.button-about:hover {
+  background: var(--blue);
+}
+
+.button-checked:hover {
+  background: var(--brown);
+}
+
+.button-about:focus {
+  background: var(--hard-blue);
+  color: var(--hard-gray);
+}
+
+.button-checked:focus {
+  background: var(--hard-brown);
+  color: var(--hard-gray);
+}
+
+.rating {
+  background: var(--esey-gray);
 }
