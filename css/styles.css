@@ -75,6 +75,21 @@ img {
 .main-menu-nav a:focus {
   color: var(--esey-blue);
 }
+
+.welcome {
+  background-image: url(../img/background\ photo.png);
+  background-repeat: no-repeat;
+  width: 1200px;
+  height: 509px;
+}
+
+/*---------------images--------------------*/
+
+.welcome-img {
+}
+
+.BG_decorate {
+}
 /*-----------------------------------------*/
 .item-1 {
   color: var(--white);
@@ -122,10 +137,10 @@ img {
   color: var(--black);
   background-color: var(--gray);
 }
-.item-3-4-5 ul {
+.item-3-4-5_list {
   list-style: none;
 }
-.item-3-4-5 li {
+.item-3-4-5_list li {
   text-align: center;
 }
 
@@ -233,7 +248,7 @@ button {
 /*-------HotelPage-------*/
 /*-----------------------*/
 
-.hotel-hidden{
+.hotel-hidden {
   visibility: hidden;
 }
 
@@ -320,22 +335,21 @@ button {
   fill: var(--esey-blue);
 }
 
-.active-arrow path{
+.active-arrow path {
   fill: var(--esey-blue);
 }
 
 /*-----------------------------------------*/
 
 .list-block {
-  border-bottom: 1px solid var(--gray); 
+  border-bottom: 1px solid var(--gray);
 }
 
 .block-hotel {
   list-style: none;
 }
 
-.button-about
-.button-checked {
+.button-about .button-checked {
   vertical-align: middle;
   text-transform: uppercase;
   font-weight: bold;
