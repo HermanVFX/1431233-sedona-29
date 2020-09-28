@@ -8,52 +8,73 @@
     <link rel="stylesheet" href="css/styles.css"> 
 </head>
 
-<body>
+<body class="page-body ">
   <header class="main-header">
     <nav class="main-menu">
-      <a href="#">
-        <img class="main-logo" src="img/logo.svg" width="138" height="70" alt="Logo_sedona">
+      <a class="main-logo" href="#">
+        <img class="main-logo-img" src="img/icon/logo.svg" width="138" height="70" alt="Logo_sedona">
       </a>
-      <div class="main-menu-wrapper">
         <ul class="main-menu-nav">
           <li><a  href="#">Информация</a></li>
           <li><a  href="#">Фото и видео</a></li>          
           <li><a  href="#">Карта штата</a></li>
           <li><a  href="#" class="active">Гостиницы</a></li>
-        </ul>
       </div>
     </nav>
   </header>
     <main>
         <h1 class="hotel-hidden">Гостиницы Седона</h1>
         <div class="filtr">
-            <form id="filters-form" role="form">
-                
-                <div>
+            <form class="filters-form-style" id="filters-form" role="form">                
+                <div class="filtr-list_1">
                     <p class="filtr-list-hidden">Инфраструктура:</p>
-                    <div id="infro">
-                        <div class="checkbox"><label><input type="checkbox" name="infro[]" value="1"> Бассейн</label></div>
-                        <div class="checkbox"><label><input type="checkbox" name="infro[]" value="2"> Парковка</label></div>
-                        <div class="checkbox"><label><input type="checkbox" name="infro[]" value="3"> WI - FI</label></div>
+                    <div id="check-list infro">
+                        <label class="check option">
+                          <input class="check-input" type="checkbox" name="infro[]">
+                          <span class="check-box"></span>
+                          Бассейн
+                        </label>
+                        <label class="check option">
+                          <input class="check-input" type="checkbox" name="infro[]">
+                          <span class="check-box"></span>
+                          Парковка
+                        </label>
+                        <label class="check option">
+                          <input class="check-input" type="checkbox" name="infro[]">
+                          <span class="check-box"></span>
+                          WI - FI
+                        </label>
                     </div>
                 </div>
 
-                <div>
+                <div class="filtr-list_2">
                     <p class="filtr-list-hidden">Тип жилья:</p>
-                    <div id="type">
-                        <div class="checkbox"><label><input type="checkbox" name="type[]" value="1"> Гостиница</label></div>
-                        <div class="checkbox"><label><input type="checkbox" name="type[]" value="2"> Мотель</label></div>
-                        <div class="checkbox"><label><input type="checkbox" name="type[]" value="3"> Апартаменты</label></div>
+                    <div id="check-list type">
+                      <label class="check option">
+                        <input class="check-input" type="checkbox" name="infro[]">
+                        <span class="check-box"></span>
+                        Гостиница
+                      </label>
+                      <label class="check option">
+                        <input class="check-input" type="checkbox" name="infro[]">
+                        <span class="check-box"></span>
+                        Мотель
+                      </label>
+                      <label class="check option">
+                        <input class="check-input" type="checkbox" name="infro[]">
+                        <span class="check-box"></span>
+                        Апартаменты
+                      </label>
                     </div>
                 </div>
 
-                <div>
+                <div class="filtr-list_3">
                     <p class="filtr-list-hidden">Стоимость в сутки (Р):</p>
-                    <div id="prise">
+                    <div id="check-list prise">
                         <p class="price">от 0 |  до 3000</p>
-                        
-                        <input type="hidden" id="min-price" name="min_price" value="0">
-                        <input type="hidden" id="max-price" name="max_price" value="3000">
+                        <div class="slidecontainer">
+                          <input type="range" min="1" max="100" value="50" class="slider" id="myRange">
+                        </div>
                     </div>
                     <button class="show">Показать</button>
                 </div>
@@ -67,36 +88,41 @@
                 <li><a href="#" class="sorting-button">По типу</a></li>
                 <li><a href="#" class="sorting-button">По рейтингу</a></li>
             </ul>
-            <a>
-                <svg class="arrow active-arrow" width="11" height="10" viewBox="0 0 11 10" fill="none" >
-                    <path d="M5.5 0L0 10H11L5.5 0Z" fill="#CACACA"/>
-                </svg>
-            </a>
-            <a>
-                <svg class="arrow" width="11" height="10" viewBox="0 0 11 10" fill="none" >
-                    <path d="M5.5 10L11 0L0 0L5.5 10Z" fill="#CACACA"/>
-                </svg>
-            </a>
+            <div class="arrow-block">
+              <a>
+                  <svg class="arrow active-arrow" width="11" height="10" viewBox="0 0 11 10" fill="none" >
+                      <path d="M5.5 0L0 10H11L5.5 0Z" fill="#CACACA"/>
+                  </svg>
+              </a>
+              <a>
+                  <svg class="arrow" width="11" height="10" viewBox="0 0 11 10" fill="none" >
+                      <path d="M5.5 10L11 0L0 0L5.5 10Z" fill="#CACACA"/>
+                  </svg>
+              </a>
+            </div>
         </div>
         <div class="list">
             <div class="list-block">
                 <ul class="block-hotel">
                     <li>
                         <a href="#">                    
-                            <img src="img/hotel_ARS.png" width="135" height="90" alt="photo hotel">                                   
+                            <img class="img-hotel-list" src="img/hotel_ARS.png" width="135" height="90" alt="photo hotel">                                   
                         </a>
                     </li>
-                    <li>
+                    <li class="hotel-name-list">
                         <h2>Amara Resort & Spa</h2>
+                        <p>ГОСТИНИЦА</p>
                         <p>От 4000 Р.</p>
-                        <button class="button-about" type="button">ПОДРОБНЕЕ</button>
-                        <button class="button-checked" type="button">ЗАБРОНИРОВАТЬ</button>
+                        <button class="button-hotels button-about" type="button">ПОДРОБНЕЕ</button>
+                        <button class="button-hotels button-checked" type="button">ЗАБРОНИРОВАТЬ</button>
                     </li>
-                    <li>
+                    <li class="rating-list">
+                      <div class="star-block">
                         <img class="star" src="img/icon/star.svg" height="17" width="18" alt="*">
                         <img class="star" src="img/icon/star.svg" height="17" width="18" alt="*">
                         <img class="star" src="img/icon/star.svg" height="17" width="18" alt="*">
                         <img class="star" src="img/icon/star.svg" height="17" width="18" alt="*">
+                      </div>
                         <p class="rating">Рейтинг: 8,5</p>
                     </li>
                 </ul>
@@ -109,16 +135,19 @@
                             <img src="img/hotel_DQI.png" width="135" height="90" alt="photo hotel">                                   
                         </a>
                     </li>
-                    <li>
+                    <li class="hotel-name-list">
                         <h2>Desert Quail Inn</h2>
+                        <p>МОТЕЛЬ</p>
                         <p>От 3000 Р.</p>
-                        <button class="button-about" type="button">ПОДРОБНЕЕ</button>
-                        <button class="button-checked" type="button">ЗАБРОНИРОВАТЬ</button>
+                        <button class="button-hotels button-about" type="button">ПОДРОБНЕЕ</button>
+                        <button class="button-hotels button-checked" type="button">ЗАБРОНИРОВАТЬ</button>
                     </li>
-                    <li>
+                    <li class="rating-list">
+                      <div class="star-block">
                         <img class="star" src="img/icon/star.svg" height="17" width="18" alt="*">
                         <img class="star" src="img/icon/star.svg" height="17" width="18" alt="*">
                         <img class="star" src="img/icon/star.svg" height="17" width="18" alt="*">
+                      </div>
                         <p class="rating">Рейтинг: 8,9</p>
                     </li>
                 </ul>
@@ -131,15 +160,18 @@
                             <img src="img/hotel_VAPD.png" width="135" height="90" alt="photo hotel">                                   
                         </a>
                     </li>
-                    <li>
+                    <li class="hotel-name-list">
                         <h2>Villas at Poco Diablo</h2>
+                        <p>АППАРТАМЕНТЫ</p>
                         <p>От 2000 Р.</p>
-                        <button class="button-about" type="button">ПОДРОБНЕЕ</button>
-                        <button class="button-checked" type="button">ЗАБРОНИРОВАТЬ</button>
+                        <button class="button-hotels button-about" type="button">ПОДРОБНЕЕ</button>
+                        <button class="button-hotels button-checked" type="button">ЗАБРОНИРОВАТЬ</button>
                     </li>
-                    <li>
+                    <li class="rating-list">
+                      <div class="star-block">
                         <img class="star" src="img/icon/star.svg" height="17" width="18" alt="*">
                         <img class="star" src="img/icon/star.svg" height="17" width="18" alt="*">
+                      </div>
                         <p class="rating">Рейтинг: 9,2</p>
                     </li>
                 </ul>
@@ -150,7 +182,7 @@
       <div class="contact">
         <p><a href="#">#visitSEDONA</a><br>ТЕЛ: <a href="#">+7(495) 666-01-66</a></p>
       </div>
-      <ul>
+      <ul class="social-list">
         <li>
           <a href="#">
             <img class="social" src="img/icon/social_tw.svg" height="15.01" width="16.98" alt="twitter">

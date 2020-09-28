@@ -7,30 +7,28 @@
     <link rel="stylesheet" href= "normalize.css">
     <link rel="stylesheet" href="css/styles.css">    
   </head>
-  <body>
+  <body class="page-body">
     <header class="main-header">
-      <nav class="main-menu">
-        <a href="#">
-          <img class="main-logo" src="img/logo.svg" width="138" height="70" alt="Logo_sedona">
-        </a>
-        <div class="main-menu-wrapper">
+      <nav class="main-menu">        
           <ul class="main-menu-nav">
-            <li><a  href="#">Информация</a></li>
-            <li><a  href="#">Фото и видео</a></li>          
-            <li><a  href="#">Карта штата</a></li>
-            <li><a  href="#">Гостиницы</a></li>
+            <a class="main-logo" href="#">
+              <img src="img/icon/logo.svg" width="138" height="70" alt="Logo_sedona">
+            </a>
+            <li class="main-list-info"><a  href="#">Информация</a></li>
+            <li class="main-list-photo"><a  href="#">Фото и видео</a></li>          
+            <li class="main-list-map"><a  href="#">Карта штата</a></li>
+            <li class="main-list-hotels"><a  href="#">Гостиницы</a></li>
           </ul>
-        </div>
       </nav>
     </header>
     <main class="container">
       <section class="welcome">
+        <img class="welcome-img" src="img/welcome.svg" alt="Добро пожаловать в Седонну" width="456.65px" height="350.88px">
         <svg class="BG_decorate" width="1200" height="57" viewBox="0 0 1200 57" fill="none" 
           style="width: 1200px;
                  height: 57px">
           <path d="M0 57V0L250 24V0L600 57L950 0V24L1200 0V57H0Z" fill="white"/>
         </svg>
-        <img class="welcome-img" src="img/welcome.svg" alt="Добро пожаловать в Седонну" width="456.65px" height="350.88px">
       </section>
       <section class="tagline">
         <h1 class="tagline-head">Седона — небольшой городок в Аризоне, заслуживающий большего!</h1>
@@ -87,16 +85,16 @@
         <p>укажите предполагаемыедаты поездки, и мы покажем вам лучшие предложения гостиниц в седоне</p>
         <button class="open-button" onclick="openForm()">ПОИСК ГОСТИНИЦЫ В СЕДОНЕ</button>
         <div class="form" id="inForm">
-          <form action="#" class="form-block">
-            <label for="data1"><b>Дата заезда:</b></label>
-            <input type="date" name="in">
-            <label for="data2"><b>Дата выезда:</b></label>
-            <input type="date" name="out">
-            <label for="name"><b>Взрослые:</b></label>
-            <input type="number" name="people">
-            <label for="name"><b>Дети:</b></label>
-            <input type="number" name="child">
-            <button class="send-button">Найти</button>
+          <form action="#" class="form-block">  
+            <label class="data1 form_elements" for="data1"><b>Дата заезда:</b></label>
+            <input class="data1_in form_elements" type="date" name="in">
+            <label class="data2 form_elements" for="data2"><b>Дата выезда:</b></label>
+            <input class="data2_in form_elements" type="date" name="out">
+            <label class="name1 form_elements" for="name"><b>Взрослые:</b></label>
+            <input class="name1_in form_elements" type="number" name="people">
+            <label class="name2 form_elements" for="name"><b>Дети:</b></label>
+            <input class="name2_in form_elements" type="number" name="child">
+            <button class="send-button form_elements">Найти</button>
           </form>
         </div>
       </section>
