@@ -85,7 +85,30 @@ img {
   display: flex;
   list-style: none;
 }
+.main-menu-nav li {
+  margin-top: 15px;
+}
+.main-logo {
+  order: 3;
+  margin-right: 147px;
+  z-index: 1;
+}
 
+.main-list-info {
+  order: 1;
+  margin-right: 134px;
+}
+.main-list-photo {
+  order: 2;
+  margin-right: 133px;
+}
+.main-list-map {
+  margin-right: 147px;
+  order: 4;
+}
+.main-list-hotels {
+  order: 5;
+}
 
 .main-menu-nav a:not([href]) {
   background-color: var(--basic-black);
@@ -143,7 +166,6 @@ img {
 .tagline p {
   justify-self: center;
   margin-top: 16.5px;
-  margin-bottom: 51px;
 }
 
 /*-----------------------------------------*/
@@ -158,38 +180,60 @@ img {
 
 .city-description {
   flex-grow: 1;
+  width: 400px;
+  height: 256px;
+}
+
+.city-description h2 {
+  text-align: center;
+  width: 122px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 47px;
+  font-weight: bold;
+  font-size: 21px;
+  line-height: 21px;
+}
+
+.city-description p {
+  width: 297px;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .city-img {
   flex-grow: 2;
 }
 
-.item-1 h2 {
-  font-weight: bold;
-  font-size: 21px;
-  line-height: 21px;
+/*-----------------------------------------*/
+.description {
+  
 }
 
-/*-----------------------------------------*/
-
-.description ul {
+.description-list {
   margin: 0;
   padding: 0;
 
   display: flex;
-
+  justify-content: space-around;
   list-style: none;
 }
 
-.description li {
+.description-blocks {
   text-align: center;
+  margin-top: 55px;
+  margin-bottom: 82px;
 }
 
-.description h3 {
+.description-blocks h3 {
   font-weight: bold;
   font-size: 21px;
   line-height: 21px;
 }
+
+
+
 /*-----------------------------------------*/
 .item-2 {
   display: flex;
@@ -200,15 +244,37 @@ img {
   background-repeat: no-repeat, repeat;
 }
 
+.devil-img {
+  flex-grow: 2;
+}
+
+.devil-description {
+  flex-grow: 1;
+  width: 400px;
+  height: 256px;
+}
 
 .item-2 h2 {
+  text-align: center;
+  width: 122px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 47px;
   font-weight: bold;
   font-size: 21px;
   line-height: 21px;
 }
 
+.item-2 p {
+  width: 297px;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+
 /*-----------------------------------------*/
 .item-3-4-5 {
+  display: grid;
   color: var(--black);
   background-color: var(--gray);
 }
@@ -216,11 +282,13 @@ img {
   display: flex;
   margin: 0;
   padding: 0;
-
+  justify-content: space-around;
   list-style: none;
 }
 .item-3-4-5_list li {
   text-align: center;
+  margin-top: 47px;
+  margin-bottom: 54px;
 }
 
 .item-3-4-5 h2 {
@@ -236,8 +304,9 @@ img {
 
 .appointment p:first-child {
   font-weight: bold;
-  font-size: 21px;
+  font-size: 30px;
   line-height: 21px;
+  margin-top:58px;
 }
 
 /*-- Кнопки --*/
@@ -251,7 +320,8 @@ button {
 .open-button {
   height: 86px;
   width: 568px;
-
+  margin-top: 39px;
+  margin-bottom: 473px;
   color: var(--white);
   vertical-align: middle;
   text-transform: uppercase;
@@ -267,10 +337,13 @@ button {
 
 /*-- Форма отправки --*/
 .form {
+  margin-top: -473px;
+  z-index: 2;
   width: 568px;
-
-  margin-left: auto;
-  margin-right: auto;
+  position: absolute;
+  margin-left: -284px;
+  left: 50%;
+  background-color: var(--white);
 }
 
 .form-block {
@@ -362,9 +435,15 @@ button {
   background-color: var(--blue);
 }
 
+.map {
+  position: absolute;
+  margin-top: -470px;
+  z-index: 1;
+}
 /*-- Футер --*/
 
 .main-footer {
+  z-index: 2;
   background: rgba(255, 255, 255, 0.9);
   color: var(--black);
   font-weight: bold;
@@ -425,6 +504,7 @@ button {
 .footer-logo-svg path:hover {
   fill: var(--blue);
 }
+
 
 /*-----------------------*/
 /*-------HotelPage-------*/
