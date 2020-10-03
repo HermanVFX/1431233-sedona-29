@@ -512,6 +512,9 @@ button {
 
 .hotel-hidden {
   visibility: hidden;
+  height: 0;
+  margin: 0;
+  padding: 0;
 }
 
 .filtr {
@@ -606,15 +609,36 @@ button {
 }
 
 .sorting {
+  padding: 0 73px 0 73px;
   font-size: 12px;
   line-height: 18px;
+  display: flex;
+  justify-content: space-between;
 }
 
 .sorting-list {
+  margin: 0;
+  padding: 0;
   list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.sorting-text {
+  margin: 0px 39px 0px 0px;
+  padding: 0;
+}
+
+.sorting-list li {
+  display: block;
+  margin-top: 31px;
+  margin-bottom: 31px;
 }
 
 .found {
+  margin-top: -2px;
+  margin-right: 47px;
   font-weight: bold;
   font-size: 21px;
   line-height: 26px;
@@ -626,9 +650,12 @@ button {
   border-bottom: 1px solid var(--gray);
 }
 
+
+
 .sorting-button {
   border-bottom: 1px dashed var(--esey-blue);
   color: var(--esey-brown);
+  margin-right: 33px;
 }
 
 .sorting-button:hover {
@@ -644,6 +671,10 @@ button {
   cursor: default;
   color: var(--esey-blue);
   border-bottom: none;
+}
+
+.arrow-block {
+  margin: auto 0px auto 12px;
 }
 
 .arrow path:hover {
