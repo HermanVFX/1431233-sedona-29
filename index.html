@@ -9,27 +9,22 @@
   </head>
   <body class="page-body">
     <header class="main-header">
-      <nav class="main-menu">        
+      <nav class="main-menu">
+        <a class="main-logo" href="#">
+          <img src="img/icon/logo.svg" width="138" height="70" alt="Logo_sedona">
+        </a>        
           <ul class="main-menu-nav">
-            <a class="main-logo" href="#">
-              <img src="img/icon/logo.svg" width="138" height="70" alt="Logo_sedona">
-            </a>
             <li class="main-list-info"><a  href="#">Информация</a></li>
             <li class="main-list-photo"><a  href="#">Фото и видео</a></li>          
             <li class="main-list-map"><a  href="#">Карта штата</a></li>
-            <li class="main-list-hotels"><a  href="#">Гостиницы</a></li>
+            <li class="main-list-hotels"><a  href="hotels.html">Гостиницы</a></li>
           </ul>
       </nav>
     </header>
     <main class="container">
-      <section class="welcome">
-        <img class="welcome-img" src="img/welcome.svg" alt="Добро пожаловать в Седонну" width="456.65px" height="350.88px">
-        <!--  <svg class="BG_decorate" width="1200" height="57" viewBox="0 0 1200 57" fill="none" 
-          style="width: 1200px;
-                 height: 57px"> -->
-          <path d="M0 57V0L250 24V0L600 57L950 0V24L1200 0V57H0Z" fill="white"/>
-        </svg>
-      </section>
+      <div class="welcome">
+        <img class="welcome-img" src="img/welcome.svg" alt="Добро пожаловать в Седонну" width="457" height="351">
+      </div>
       <section class="tagline">
         <h1 class="tagline-head">Седона — небольшой городок в Аризоне, заслуживающий большего!</h1>
         <p>Рассмотрим 5 причин, по которым Седона круче, чем гранд каньон!</p>
@@ -39,7 +34,7 @@
           <h2>Настоящий городок</h2>
           <p>— №1 —<br> <br>Седона - не аттракцион для туристов, там течёт своя жизнь</p>
         </div>
-        <img class="city-img" src="img/item_photo1.png">
+        <img class="city-img" src="img/item_photo1.png" alt="Изображение города">
       </section>
       <section class="description">
         <ul class="description-list">
@@ -55,7 +50,7 @@
         </ul>
       </section>
       <section class="item-2">        
-        <img class="devil-img" src="img/item_photo2.png"> 
+        <img class="devil-img" src="img/item_photo2.png" alt="Изображение природы"> 
         <div class="devil-description">
           <h2>Там есть Мост дьявола</h2>
           <p>— №2 —<br> <br>Да, по нему можно пройти! Если конечно вы осмелитесь</p>
@@ -77,34 +72,40 @@
           </li>
         </ul>
       </section>
-      <section class="appointment">
+      <div class="appointment">
         <p class="appointment-text"><strong>Заинтересовались?</strong></p>
         <p class="appointment-text-2">
           укажите предполагаемыедаты поездки,<br>и мы покажем вам лучшие предложения гостиниц в седоне
         </p>
         <button class="open-button" onclick="openForm()">ПОИСК ГОСТИНИЦЫ В СЕДОНЕ</button>
-        <div class="form" id="inForm">
-          <form action="#" class="form-block">  
-            <label class="data1 form_elements" for="data1"><b>Дата заезда:</b></label>
-            <input class="data1_in form_elements" type="date" name="in">
-            <div class="calendar calendar-1"></div>
-            <label class="data2 form_elements" for="data2"><b>Дата выезда:</b></label>
-            <input class="data2_in form_elements" type="date" name="out">
-            <div class="calendar calendar-2"></div>
-            <label class="name1 form_elements" for="name"><b>Взрослые:</b></label>
-            <div class="minus"></div>
-            <input class="name1_in form_elements" type="number" name="people">
-            <div class="plus"></div>
-            <label class="name2 form_elements" for="name"><b>Дети:</b></label>
-            <div class="minus"></div>
-            <input class="name2_in form_elements" type="number" name="child">
-            <div class="plus"></div>
+        <div class="form form-visible" id="inForm">
+          <form action="#" class="form-block">            
+            <label class="data1 form-element" for="data1">
+              <b>Дата заезда:</b>
+              <input class="data1_in" type="date" name="in" id="data1" placeholder="24 Апреля 2017">              
+            </label>           
+            <label class="data2 form-element" for="data2">
+              <b>Дата выезда:</b>
+              <input class="data2_in" type="date" name="out" id="data2" placeholder="4 Июля 2017">
+            </label>
+            <label class="name1 form-element" for="name1">
+              <b>Взрослые:</b>
+              <input class="name1_in" type="number" name="people" id="name1">
+            </label>
+            <div class="minus minus1"></div>
+            <div class="plus plus1"></div>
+            <label class="name2 form-element" for="name2">
+              <b>Дети:</b>
+              <input class="name2_in" type="number" name="child" id="name2">
+            </label>
+            <div class="minus minus2"></div>
+            <div class="plus plus2"></div>
             <button class="send-button">Найти</button>
           </form>
         </div>
-      </section>
+      </div>
       <div class="map">
-        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d52379.41651717745!2d-111.80922546410171!3d34.86342471963245!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x872da132f942b00d%3A0x5548c523fa6c8efd!2z0KHQtdC00L7QvdCwLCDQkNGA0LjQt9C-0L3QsCA4NjMzNiwg0KHQqNCQ!5e0!3m2!1sru!2sru!4v1600022770999!5m2!1sru!2sru" width="1199px" height="593px" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d52379.41651717745!2d-111.80922546410171!3d34.86342471963245!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x872da132f942b00d%3A0x5548c523fa6c8efd!2z0KHQtdC00L7QvdCwLCDQkNGA0LjQt9C-0L3QsCA4NjMzNiwg0KHQqNCQ!5e0!3m2!1sru!2sru!4v1600022770999!5m2!1sru!2sru" width="1200" height="588" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
       </div>
     </main>
     <footer class="main-footer">
@@ -149,6 +150,7 @@
           </div>             
         </a>
       </div>
-    </footer>     
+    </footer>
+    <script src="js/jscripts.js"></script>     
   </body>
 </html>

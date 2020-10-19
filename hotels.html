@@ -10,25 +10,25 @@
 
 <body class="page-body ">
   <header class="main-header">
-    <nav class="main-menu">        
+    <nav class="main-menu">
+      <a class="main-logo" href="#">
+        <img src="img/icon/logo.svg" width="138" height="70" alt="Logo_sedona">
+      </a>        
         <ul class="main-menu-nav">
-          <a class="main-logo" href="#">
-            <img src="img/icon/logo.svg" width="138" height="70" alt="Logo_sedona">
-          </a>
           <li class="main-list-info"><a  href="#">Информация</a></li>
           <li class="main-list-photo"><a  href="#">Фото и видео</a></li>          
           <li class="main-list-map"><a  href="#">Карта штата</a></li>
-          <li class="main-list-hotels"><a  href="#" class="active-page">Гостиницы</a></li>
+          <li class="main-list-hotels"><a  href="#">Гостиницы</a></li>
         </ul>
     </nav>
   </header>
     <main class="hotels-main">
         <h1 class="hotel-hidden">Гостиницы Седона</h1>
         <div class="filtr">
-            <form class="filters-form-style" id="filters-form" role="form">                
+            <form class="filters-form-style" id="filters-form">                
                 <div class="filtr-list_1">
                     <p class="filtr-list-hidden">Инфраструктура:</p>
-                    <div id="check-list infro">
+                    <div class="check-list infro">
                         <label class="check option">
                           <input class="check-input" type="checkbox" name="infro[]">
                           <span class="check-box"></span>
@@ -49,7 +49,7 @@
 
                 <div class="filtr-list_2">
                     <p class="filtr-list-hidden">Тип жилья:</p>
-                    <div id="check-list type">
+                    <div class="check-list type">
                       <label class="check option">
                         <input class="check-input" type="checkbox" name="infro[]">
                         <span class="check-box"></span>

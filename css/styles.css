@@ -45,8 +45,6 @@ img {
   height: auto;
 }
 
-
-
 /* --Grids-- */
 
 .page {
@@ -86,32 +84,25 @@ img {
   margin: 0 0 0 73px;
   background-color: var(--white);
   display: flex;
+  justify-content: space-between;
   flex-wrap: wrap;
   list-style: none;
 }
 .main-menu-nav li {
   margin-top: 15px;
 }
-.main-logo {
-  order: 3;
-  margin-right: 147px;
-  z-index: 1;
+
+.main-list-photo {
+  margin: 0 0 0 -285px;
 }
 
-.main-list-info {
-  order: 1;
-  margin-right: 134px;
-}
-.main-list-photo {
-  order: 2;
-  margin-right: 133px;
-}
 .main-list-map {
-  margin-right: 147px;
-  order: 4;
+  margin: 0 -270px 0 0;
 }
-.main-list-hotels {
-  order: 5;
+
+.main-logo {
+  position: absolute;
+  left: calc(50% - 69px);
 }
 
 .main-menu-nav a:not([href]) {
@@ -129,7 +120,7 @@ img {
   opacity: 0.3;
 }
 
-.main-menu-nav .activ-page{
+.main-menu-nav .activ-page {
   color: var(--esey-brown);
 }
 
@@ -147,7 +138,6 @@ img {
 }
 
 .BG_decorate {
-  
   margin-bottom: 0px;
 }
 
@@ -165,7 +155,6 @@ img {
   background-repeat: no-repeat;
   background-position: 0 0;
   top: 509px;
-
 }
 
 /* --------------------------------------- */
@@ -179,7 +168,7 @@ img {
   justify-self: center;
   width: 470px;
   height: 80px;
-  
+
   line-height: 26px;
   align-items: center;
   text-align: center;
@@ -300,8 +289,6 @@ img {
   margin-top: -104px;
 }
 
-
-
 /*-----------------------------------------*/
 .item-2 {
   display: flex;
@@ -378,22 +365,22 @@ img {
 }
 
 /*-----------------------------------------*/
-.appointment {
-  text-align: center;
-}
 
 .appointment-text {
   margin-top: 57px;
+  text-align: center;
 }
 .appointment-text-2 {
   margin-top: 26px;
   line-height: 1.9;
+  text-align: center;
 }
 
 .appointment-text strong {
   font-weight: bold;
   font-size: 30px;
   line-height: 21px;
+  text-align: center;
 }
 
 /*-- Кнопки --*/
@@ -407,168 +394,99 @@ button {
 .open-button {
   height: 86px;
   width: 568px;
-  margin-top: 28px;
-  margin-bottom: 473px;
   color: var(--white);
   vertical-align: middle;
   text-transform: uppercase;
   background-color: var(--esey-brown);
   border: none;
+  margin: 28px auto 0 316px;
 }
 
-.open-button:hover,
-.open-button:focus,
-.open-button:active {
+.open-button:hover {
   background-color: var(--brown);
+}
+
+.open-button:active {
+  background-color: var(--hard-brown);
+  color: rgba(255, 255, 255, 0.3);
 }
 
 /*-- Форма отправки --*/
 
-::-webkit-textfield-decoration-container { }
 ::-webkit-inner-spin-button {
-    -webkit-appearance: none;
+  -webkit-appearance: none;
 }
 ::-webkit-outer-spin-button {
-    -webkit-appearance: none;
+  -webkit-appearance: none;
 }
 
-::-webkit-datetime-edit { display: none; }
-::-webkit-datetime-edit-fields-wrapper { display: none; }
-::-webkit-datetime-edit-text { display: none; }
-::-webkit-datetime-edit-month-field { display: none; }
-::-webkit-datetime-edit-day-field { display: none; }
-::-webkit-datetime-edit-year-field { display: none; }
-::-webkit-inner-spin-button { display: none; }
-::-webkit-calendar-picker-indicator { display: none; }
-
 .form {
-  margin-top: -473px;
-  z-index: 2;
   width: 568px;
-  position: absolute;
+  position: relative;
   margin-left: -284px;
+  margin-bottom: -396px;
   left: 50%;
+  top: 0px;
   background-color: var(--white);
+}
+
+.form-visible {
+  display: block;
+}
+
+.form-non-visible {
+  display: none;
 }
 
 .form-block {
   box-shadow: 0px 7px 15px rgba(0, 1, 1, 0.15);
   display: grid;
 
-  grid-template-columns: 114px 114px 114px 114px;
+  grid-template-columns: 229px 229px;
   grid-template-rows: 38px 38px 38px 58px;
   row-gap: 27.9px;
   padding: 55px;
   height: 285px;
 }
 
-.data1 {
-  grid-column: 1 / 2;
-  grid-row: 1 / 2;
-  margin: 7px 26px 0px 0;
+.form-element {
+  line-height: 26px;
+  font-weight: 700;
+
+  display: flex;
+  justify-content: space-between;
 }
 
-.data1_in {
-  grid-column: 2 / 5;
+.form-element b {
+  margin: auto 0 auto 0;
+}
+
+.data1 {
+  grid-column: 1 / 3;
   grid-row: 1 / 2;
+  margin-bottom: 4px;
 }
 
 .data2 {
-  grid-column: 1 / 2;
-  grid-row: 2 / 3;
-  margin: 10px 26px 0px 0;
-  width: 91px;
-}
-
-.calendar {
-  position: absolute;
-  width: 21px;
-  height: 23px;
-  background-image: url(../img/icon/calendar.svg);
-  background-repeat: no-repeat;
-  background-position: 0 0;
-  
-  left: 483px;
-  
-
-}
-.calendar-1 {
-  top: 62px;
-}
-
-.calendar-2 {
-  top: 129px;
-}
-
-.data2_in {
-  grid-column: 2 / 5;
+  grid-column: 1 / 3;
   grid-row: 2 / 3;
 }
 
 .name1 {
   grid-column: 1 / 2;
   grid-row: 3 / 4;
-  margin: 11px 41px 0px 0;
-}
-
-.name1_in {
-  grid-column: 2 / 3;
-  grid-row: 3 / 4;
+  margin-top: 3px;
 }
 
 .name2 {
-  grid-column: 3 / 4;
+  grid-column: 2 / 3;
   grid-row: 3 / 4;
-  margin: 11px -25px 0px 0;
+  margin-top: 3px;
 }
 
-.name2_in {
-  grid-column: 4 / 5;
-  grid-row: 3 / 4;
+.name2 b {
+  margin-left: 50px;
 }
-
-.form_elements {
-  height: 38px;
-}
-
-.form-block input {
-  font: inherit;
-  background-color: var(--esey-gray);
-  border: none;
-}
-.form-block input:hover {
-  background-color: var(--gray);
-}
-.form-block input:focus {
-  background-color: transparent;
-  border: 2px solid var(--esey-gray);
-}
-
-.plus {
-  position: relative;
-  background-image: url(../img/icon/Union.svg);
-  background-repeat: no-repeat;
-  background-position: center;
-  height: 11px;
-  width: 11px;
-
-  right: -92px;
-  top: -136px;
-}
-
-.minus {
-  position: relative;
-  background-image: url(../img/icon/minus.svg);
-  background-repeat: no-repeat;
-  background-position: center;
-  height: 3px;
-  width: 12px;
-
-  right: -129px;
-  top: -131px;
-}
-
-
 
 .send-button {
   color: var(--white);
@@ -577,27 +495,127 @@ button {
   background-color: var(--esey-blue);
   border: none;
   height: 58px;
-  grid-column: 1 / 5;
+  grid-column: 1 / 3;
   grid-row: 4 / 5;
   margin-top: 29px;
 }
 
-.send-button:hover,
-.send-button:focus,
-.send-button:active {
+.send-button:hover {
   background-color: var(--blue);
 }
 
-.map {
-  position: absolute;
-  margin-top: -470px;
-  z-index: 1;
+.send-button:active {
+  background-color: var(--hard-blue);
+  color: rgba(255, 255, 255, 0.3);
 }
+
+.data1_in,
+.data2_in {
+  width: 346px;
+  height: 38px;
+}
+
+.name2_in,
+.name1_in {
+  width: 38px;
+  height: 38px;
+  margin-right: 38px;
+  text-align: center;
+}
+
+::-webkit-calendar-picker-indicator {
+  position: absolute;
+  width: 21px;
+  height: 23px;
+  background-image: url(../img/icon/calendar.svg);
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  cursor: pointer;
+  left: 456px;
+}
+
+::-webkit-calendar-picker-indicator:hover {
+  background-image: url(../img/icon/calendarhov.svg);
+}
+
+::-webkit-calendar-picker-indicator:active {
+  background-image: url(../img/icon/calendarAct.svg);
+}
+
+.form-element input {
+  font: inherit;
+  background-color: var(--esey-gray);
+  border: none;
+  padding: 0;
+}
+.form-element input:hover {
+  background-color: var(--gray);
+}
+.form-element input:focus {
+  background-color: var(--white);
+  border: 2px solid var(--esey-gray);
+}
+
+.plus,
+.minus {
+  position: absolute;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: var(--esey-gray);
+  height: 38px;
+  width: 38px;
+  cursor: pointer;
+  top: 190px;
+}
+.plus {
+  background-image: url(../img/icon/Union.svg);
+  margin-left: 191px;
+}
+
+.minus {
+  background-image: url(../img/icon/minus.svg);
+  margin-left: 115px;
+}
+
+.minus2,
+.plus2 {
+  left: 284px;
+}
+
+.plus:hover {
+  background-color: var(--gray);
+  background-image: url(../img/icon/UnionHov.svg);
+}
+
+.minus:hover {
+  background-color: var(--gray);
+  background-image: url(../img/icon/minusHov.svg);
+}
+
+.plus:active {
+  background-color: var(--gray);
+  background-image: url(../img/icon/UnionAct.svg);
+}
+
+.minus:active {
+  background-color: var(--gray);
+  background-image: url(../img/icon/minusAct.svg);
+}
+
+.map {
+  margin: 0 0 -120px 0;
+}
+
+.map iframe {
+  padding: 0;
+  margin: 0;
+}
+
 /*-- Футер --*/
 
 .main-footer {
+  z-index: 1;
   height: 120px;
-  z-index: 2;
   background: rgba(255, 255, 255, 0.9);
   color: var(--black);
   font-weight: bold;
@@ -688,10 +706,9 @@ button {
   fill: var(--blue);
 }
 
-.footer-logo-a:checked{
+.footer-logo-a:checked {
   opacity: 0.3;
 }
-
 
 /*-----------------------*/
 /*-------HotelPage-------*/
@@ -726,17 +743,17 @@ button {
 
 .filtr-list_1 {
   grid-column: 1 / 2;
-  margin:0 0 0 72px;
+  margin: 0 0 0 72px;
 }
 
 .filtr-list_2 {
   grid-column: 2 / 3;
-  margin:0 0 0 27px;
+  margin: 0 0 0 27px;
 }
 
 .filtr-list_3 {
   grid-column: 3 / 4;
-  margin:0 0 0 210px;
+  margin: 0 0 0 210px;
   width: 317px;
 }
 
@@ -809,10 +826,10 @@ button {
 .range-controls .scale {
   height: 2px;
   background-color: var(--white);
-  opacity: 0.3;  
+  opacity: 0.3;
 }
 
-.range-controls  .bar {
+.range-controls .bar {
   width: 86%;
   height: 2px;
   background-color: var(--white);
@@ -842,7 +859,7 @@ button {
 }
 
 .prise-block-end {
-  border-left:2px solid var(--white) ;
+  border-left: 2px solid var(--white);
 }
 
 .show {
@@ -860,7 +877,6 @@ button {
   padding-left: 36px;
   padding-right: 35px;
   margin: 15px auto 0 auto;
-
 }
 
 .show:hover {
@@ -911,8 +927,6 @@ button {
   border-bottom: 1px solid var(--gray);
 }
 
-
-
 .sorting-button {
   border-bottom: 1px dashed var(--esey-blue);
   color: var(--esey-brown);
@@ -935,7 +949,7 @@ button {
 }
 
 .arrow-block {
-  margin-top:37px;
+  margin-top: 37px;
 }
 
 .arrow-block a {
@@ -1003,7 +1017,7 @@ button {
 .star-block {
   display: flex;
   flex-wrap: wrap;
-  justify-content: flex-end;  
+  justify-content: flex-end;
 }
 
 .star {
@@ -1047,7 +1061,7 @@ button {
   background: var(--brown);
 }
 
-.button-about:active  {
+.button-about:active {
   background: var(--hard-blue);
   color: var(--hard-gray);
 }
@@ -1065,7 +1079,3 @@ button {
   grid-row: 3 / 4;
   margin: 0 -5px 6px 0;
 }
-
-
-
-
