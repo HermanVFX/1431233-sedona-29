@@ -770,7 +770,7 @@ button {
   margin-bottom: 25px;
 }
 .check {
-  padding-left: 43px;
+  padding-left: 40px;
 }
 
 .check-input {
@@ -780,7 +780,7 @@ button {
 
 .check-box {
   position: absolute;
-  margin-left: -43px;
+  margin-left: -40px;
   width: 27px;
   height: 23px;
   background-image: url(../img/icon/checkbox-off.svg);
@@ -815,6 +815,8 @@ button {
   display: inline-block;
   background: none;
   border: none;
+  text-align: center;
+  color: var(--white);
 }
 
 .range-controls {
@@ -825,15 +827,14 @@ button {
 
 .range-controls .scale {
   height: 2px;
-  background-color: var(--white);
-  opacity: 0.3;
+  background-color: rgba(255, 255, 255, 0.3);
 }
 
 .range-controls .bar {
-  width: 86%;
+  width: 85%;
   height: 2px;
   background-color: var(--white);
-  opacity: 0;
+  
 }
 
 .range-controls .toggle {
@@ -851,7 +852,7 @@ button {
 }
 
 .range-controls .toggle-min {
-  left: 1px;
+  left: 0px;
 }
 
 .range-controls .toggle-max {
@@ -871,12 +872,13 @@ button {
   box-sizing: border-box;
   border-radius: 2px;
   height: 36px;
+  width: 137px;
   font-size: 14px;
   line-height: 21px;
   text-transform: uppercase;
   padding-left: 36px;
   padding-right: 35px;
-  margin: 15px auto 0 auto;
+  margin: 15px 97px 0 auto;
 }
 
 .show:hover {
@@ -999,7 +1001,7 @@ button {
   font-size: 21px;
   line-height: 26px;
   grid-column: 1 / 3;
-  margin: -4px 0 -8px 0;
+  margin: -6px 0 -12px 0;
 }
 
 .hotel-name-list a:hover {
@@ -1078,4 +1080,62 @@ button {
   padding: 3px;
   grid-row: 3 / 4;
   margin: 0 -5px 6px 0;
+}
+
+
+/*  */
+
+.filter {
+  padding: 30px;
+  width: 500px;
+}
+.filter>div {
+  padding-top: 20px;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
+  display: flex;
+  -webkit-flex-direction: column;
+  -moz-flex-direction: column;
+  -ms-flex-direction: column;
+  -o-flex-direction: column;
+  flex-direction: column;
+}
+.filter>div>div {
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
+  display: flex;
+  justify-content: space-between;
+}
+.filter .slider {
+  margin-top: 10px;
+  position: relative;
+  height: 6px;
+  background: #fff;
+  border: 1px solid #000;
+}
+.filter .color-range {
+  position: absolute;
+  background: #a4a4a4;
+  width: 97%;
+  border: none;
+  height: 6px;
+  left: 15px;
+}
+.filter .block-min, .block-max {
+width: 15px;
+height: 25px;
+position: absolute;
+left: 0;
+top: -11.5px;
+background: #fff;
+border: 1px solid #000;
+border-radius: 4px;
+z-index: 1;
+}
+.filter .block-max{
+  left: 97%;
 }
