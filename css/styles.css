@@ -133,8 +133,6 @@ img {
   display: grid;
   grid-template-rows: 1fr min-content;
   align-content: start;
-
-  height: 100%;
 }
 
 .BG_decorate {
@@ -412,12 +410,13 @@ button {
 }
 
 /*-- Форма отправки --*/
-
-::-webkit-inner-spin-button {
+input::-webkit-inner-spin-button,
+input::-webkit-outer-spin-button {
   -webkit-appearance: none;
 }
-::-webkit-outer-spin-button {
-  -webkit-appearance: none;
+
+input[type='number'] {
+  -moz-appearance: textfield;
 }
 
 .form {
@@ -436,6 +435,61 @@ button {
 
 .form-non-visible {
   display: none;
+}
+
+@-webkit-keyframes shake {
+  0%,
+  100% {
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+  }
+
+  10%,
+  30%,
+  50%,
+  70%,
+  90% {
+    -webkit-transform: translateX(-10px);
+    transform: translateX(-10px);
+  }
+
+  20%,
+  40%,
+  60%,
+  80% {
+    -webkit-transform: translateX(10px);
+    transform: translateX(10px);
+  }
+}
+
+@keyframes shake {
+  0%,
+  100% {
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+  }
+
+  10%,
+  30%,
+  50%,
+  70%,
+  90% {
+    -webkit-transform: translateX(-10px);
+    transform: translateX(-10px);
+  }
+
+  20%,
+  40%,
+  60%,
+  80% {
+    -webkit-transform: translateX(10px);
+    transform: translateX(10px);
+  }
+}
+
+.form-error {
+  -webkit-animation: shake 0.6s;
+  animation: shake 0.6s;
 }
 
 .form-block {
@@ -513,6 +567,7 @@ button {
 .data2_in {
   width: 346px;
   height: 38px;
+  color: var(--hard-gray);
 }
 
 .name2_in,

@@ -10,16 +10,23 @@ var minus_chil = document.querySelector(".minus2");
 var par = form.querySelector(".name1_in");
 var chil = form.querySelector(".name2_in");
 
-var find_btn = document.querySelector(".show");
+var data_1 = form.querySelector(".data1_in");
+var data_2 = form.querySelector(".data2_in");
 
-var chek1 = document.querySelector(".check-box-1");
-var chek2 = document.querySelector(".check-box-2");
-var chek3 = document.querySelector(".check-box-3");
+var find_btn = document.querySelector(".send-button");
 
-var hotel = document.querySelector(".list-block-1")
+find_btn.addEventListener("click", function(evt) {
+    if (!data_1.value || !data_2.value || !par.value || !chil.value) {
+        evt.preventDefault();
+        form.classList.remove("form-error");
+        form.offsetWidth = form.offsetWidth;
+        form.classList.add("form-error");
+    } 
+  });
 
 open_form_btn.addEventListener("click", function(evt) {
     form.classList.remove("form-visible");
+    form.classList.remove("form-error");
     form.classList.toggle("form-non-visible");
 });
 
